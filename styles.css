@@ -1,0 +1,160 @@
+body{
+  background-color: #7c9473;
+}
+
+/* vvvTOP CONTAINERvvv */
+
+.container{
+  margin: 0 auto ;
+  padding: 0 auto;
+}
+.titleC{
+
+  text-align: center;
+}
+.titleImg{
+  padding: 0;
+
+}
+.trees{
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 100px;
+}
+.nightTrees{
+
+}
+.edition{
+  margin-top: 15px;
+}
+
+/* ^^^TOP CONTAINER^^^ */
+
+/* vvvGAME CONTAINERvvv */
+
+
+
+/* ^^^GAME CONTAINER^^^ */
+
+.rules{
+  margin-top: 10px;
+}
+
+.row{
+  margin: auto;
+
+}
+
+
+.gameBox{
+  margin: 0 auto;
+}
+.wing{
+  padding: 0;
+}
+.mountain{
+  height: 455px;
+  width: 200px;
+}
+.nightMountain{
+  z-index:;
+
+}
+.gameC{
+  border: dashed 7px;
+  text-align: center;
+}
+.btn{
+  margin: 5px;
+  border: solid 4px;
+}
+
+.build{
+  margin-left: 0;
+}
+.btn:hover{
+  border-color: red;
+  color: red;
+  background-color: #e8eae6;
+}
+.btn:active {
+  background-color: red;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.control{
+  padding: 10px;
+}
+.actions{
+  padding: 10px;
+}
+.cardArea{
+
+  height: 200px;
+}
+.card{
+  background-color: #cfdac8;
+  margin: 5px;
+}
+.resource{
+  z-index:1;
+  height: 150px;
+}
+
+.effects{
+  border: solid 4px;
+  text-align: left;
+  margin: 5px 10px;
+}
+.fire{
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+.noFire{
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+.days{
+  border: solid 4px;
+  margin: 5px 10px;
+}
+.dayText{
+
+  padding: 20px auto;
+}
+.hidden{
+  display: none;
+}
+.menu{
+  border: solid 4px;
+  border-radius: 10px;
+  border-color: #fde8cd;
+  width: 600px;
+  height: 100px;
+  background-color: #cdd0cb;
+  z-index: 2;
+  position: absolute;
+    left: 300px;
+    right: 300px;
+    top: 250px;
+}
+.closeBtn{
+  padding: 5px;
+}
+.centerStyle{
+  width: 100px;
+  height: 100px;
+}
+.nightEffect{
+  background-color: ##cdd0cb;
+  height:200px;
+  margin:auto;
+}
+.buildBtn{
+  margin: 10px;
+  height: 70px;
+  width: 100Px;
+}

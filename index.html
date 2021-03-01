@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ravine Solo Expedition</title>
+
+
+
+<!-- Bootstrap Link CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+<!-- vvvTITLE CONTAINERvvv -->
+    <div class="container top">
+      <div class="row">
+        <div class="titleImg col-auto">
+          <img class="dayTrees trees imgL" src="images/trees.jpg" alt="">
+          <img class="nightTrees hidden trees imgL" src="images/NightForest.png" alt="">
+        </div>
+        <div class="titleC col">
+          <h1 class="title" >Ravine</h1>
+          <h6 class="title edition">Solo Expedition</h6>
+        </div>
+        <div class="titleImg col-auto">
+          <img class="dayTrees trees imgR" src="images/trees.jpg" alt="">
+          <img class=" nightTrees hidden trees imgL" src="images/NightForest.png" alt="">
+        </div>
+      </div>
+    </div>
+<!-- ^^^ TITLE CONTAINER ^^^ -->
+
+<!-- vvvGAME CONTAINERvvv -->
+  <div class="container mid">
+    <div class="gameBox row">
+      <div class="wing wingL col-auto">
+        <img class=" dayMountain mountain" src="images/mountain.jpg" alt="">
+        <img class=" hidden nightMountain mountain" src="images/mountainwithmoon.png" alt="">
+      </div>
+      <div class="gameC col ">
+        <!-- vvvGAME OPENINGvvv -->
+        <div class="startGame col">
+          <h4 class="rules">Your plane has crashed in the Colorado Rockies and now you must survive until rescue arrives. </h4>
+          <h4>How to play:</h4>
+          <p>Each turn consists of a foraging phase (🍃) and a night phase (🌕). You will forfeit hearts at the beginning of each turn, equal to the amount of resources that you wish to collect.<br>
+          Resources can be used to regain hearts (❤️), start a fire (🔥), and other useful actions.<br>
+          During the Night Phase, you will have an event that will affect you in various ways. <br>
+          The game ends if you have no more lives, or you are rescued. <br>
+           Good Luck! </p>
+          <div class="playBtn btn">
+            <h1 class"">Play</h1>
+          </div>
+        </div>
+        <!-- ^^^GAME OPENING^^^ -->
+
+        <!-- vvvGAME STARTvvv -->
+        <div class="control row hidden">
+          <div class="playerHealth">
+            <button type="button" class=" life" id="heart1" name="button">❤️</button>
+            <button type="button" class=" life" id="heart2" name="button">❤️</button>
+            <button type="button" class=" life" id="heart3" name="button">❤️</button>
+            <button type="button" class=" life" id="heart4" name="button">❤️</button>
+            <button type="button" class=" life" id="heart5" name="button">❤️</button>
+            <button type="button" class=" life" id="heart6" name="button">❤️</button>
+
+          </div>
+          <div class="actions">
+              <button id="forage" type="button" name="button">Forage🍃</button>
+              <button id="sleep" type="button" name="button">Sleep🌕</button>
+              <button id="fireAction" type="button" name="button">🔥Fire🔥</button>
+              <button id="nextDay" class="hidden" type="button" name="button">Next Day🌅</button>
+          </div>
+        </div>
+        <div class="cardArea row hidden">
+
+          <div class="hidden menu buildingMenu row">
+
+            <div class="text col">
+              <button class="buildBtn" id="spear" type="button" name="button">Spear</button>
+              <button class="buildBtn" id="basket" type="button" name="button">Basket</button>
+              <button class="buildBtn" id="shelter" type="button" name="button">Shelter</button>
+            </div>
+            <div class="closeBtn col-1">
+              <button id="exit" type="button" name="button">❌</button>
+            </div>
+
+          </div>
+
+          <div class="hidden menu textBox row">
+
+            <div class="text col">
+              <h5 class="errorText"></h5>
+              <p class="errorExplain"></p>
+            </div>
+            <div class="closeBtn col-1">
+              <button id="exit" type="button" name="button">❌</button>
+            </div>
+
+          </div>
+          <div id="card1" class="card col">
+
+              <img id="resource1" class="card resource hidden" src=""  alt="">
+
+
+          </div>
+          <div id="card2" class="card col">
+
+              <img id="resource2" class="card resource hidden" src=""  alt="">
+
+
+          </div>
+          <div id="card3" class="card col">
+
+              <img id="resource3" class="card resource hidden" src=""  alt="">
+
+
+          </div>
+          <div id="card4" class="card col hidden">
+
+              <img id="resource4" class="card resource hidden" src=""  alt="">
+
+
+          </div>
+          <div id="card5" class=" card nightEffect col-4 hidden">
+
+            <img id="resource5" class="card resource hidden" src=""  alt="">
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-auto hidden build items">
+            <button type="button" class=" resourceAction" id="build" name="button">Build⚒️</button>
+            <button type="button" class="hidden" id="spearBtn" name="button">🥍</button>
+            <button type="button" class="hidden" id="basketBtn" name="button">👜</button>
+            <button type="button" class="hidden" id="shelterBtn" name="button">🏕️</button>
+          </div>
+
+
+        </div>
+
+        <div class="hidden information row ">
+          <div class="effects col">
+
+            Wood :<span id="wood"></span> <br>
+            Stone:<span id="stone"></span> <br>
+            Fiber:<span id="fiber"></span> <br>
+
+
+          </div>
+          <div class="  fireIMG col ">
+            <img class="noFire" src="images/noFire.png" alt="">
+            <img class=" fire hidden" src="images/fire.png" alt="">
+          </div>
+          <div class=" days col ">
+            <h1 class=" dayText">Day: <span class="roundNumber"></span></h1>
+          </div>
+        </div>
+
+        <!-- ^^^GAME START^^^ -->
+      </div>
+      <div class="wing wingR col-auto">
+        <img class=" dayMountain mountain" src="images/mountain.jpg" alt="">
+        <img class=" hidden nightMountain mountain" src="images/mountainwithoutmoon.png" alt="">
+      </div>
+    </div>
+  </div>
+<!-- ^^^GAME CONTAINER^^^ -->
+
+
+  </body>
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- Index JS connection -->
+    <script src="app.js" charset="utf-8"></script>
+</html>
