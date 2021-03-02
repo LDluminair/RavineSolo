@@ -67,13 +67,13 @@ function main() {
         } else if (items == "fiber") {
           fiber++;
         } else if (items == "berries") {
-          heal()
           health++
+          heal()
         } else if (items == "minnows") {
           var i;
           for (i = 0; i < 2; i++) {
-            heal()
             health++
+            heal()
           }
         }
       }
@@ -82,6 +82,7 @@ function main() {
       $("#fiber").text(" " + fiber)
       $("#forage").addClass("hidden")
       healthCheck()
+      console.log("You foraged, health = " + health)
     }
 
   });
@@ -115,8 +116,8 @@ function startGame() {
     $(".control, .information, .roundNumber, .cardArea, .build").removeClass("hidden")
     $("").text(round)
 
-    var audio = new Audio('audio/music.mp3');
-    audio.play();
+    // var audio = new Audio('audio/music.mp3');
+    // audio.play();
     main();
   });
 }
@@ -183,11 +184,14 @@ function nightEvent() {
 
     }
     else if ( encounter == "nothing"){
-      if (!$("fire").hasClass("hidden")){
+      if (!$(".fire").hasClass("hidden")){
         health++
         heal()
+        console.log("Fire healed you.")
       }
-      else{}
+      else{
+        console.log("No fire, nothing happens.")
+      }
     }
     healthCheck()
   }
@@ -278,31 +282,45 @@ function gameReset() {
 }
 
 function heal() {
-  if ($("#heart1").hasClass("hidden")) {
-    $("#heart1").removeClass("hidden")
+  if (health <= 6){
 
-  } else if ($("#heart2").hasClass("hidden")) {
-    $("#heart2").removeClass("hidden")
+    if ($("#heart1").hasClass("hidden")) {
+      $("#heart1").removeClass("hidden")
 
-  } else if ($("#heart3").hasClass("hidden")) {
-    $("#heart3").removeClass("hidden")
+    } else if ($("#heart2").hasClass("hidden")) {
+      $("#heart2").removeClass("hidden")
 
-  } else if ($("#heart4").hasClass("hidden")) {
-    $("#heart4").removeClass("hidden")
+    } else if ($("#heart3").hasClass("hidden")) {
+      $("#heart3").removeClass("hidden")
 
-  } else if ($("#heart5").hasClass("hidden")) {
-    $("#heart5").removeClass("hidden")
+    } else if ($("#heart4").hasClass("hidden")) {
+      $("#heart4").removeClass("hidden")
 
-  } else if ($("#heart6").hasClass("hidden")) {
-    $("#heart6").removeClass("hidden")
+    } else if ($("#heart5").hasClass("hidden")) {
+      $("#heart5").removeClass("hidden")
 
+    } else if ($("#heart6").hasClass("hidden")) {
+      $("#heart6").removeClass("hidden")
+
+    }
   }
+  else{
+    health = 6
+    console.log("Full Health, health = " + health)
+  }
+
 }
 
 function healthCheck() {
   if (health <= 0) {
+    console.log(health)
     gameOver()
-  } else {}
+  }
+  else if(health > 6){
+    health = 6
+    console.log("Health reset = " + health)
+  }
+  else {}
   console.log(health)
 }
 
