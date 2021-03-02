@@ -116,8 +116,8 @@ function startGame() {
     $(".control, .information, .roundNumber, .cardArea, .build").removeClass("hidden")
     $("").text(round)
 
-    // var audio = new Audio('audio/music.mp3');
-    // audio.play();
+    var audio = new Audio('audio/music.mp3');
+    audio.play();
     main();
   });
 }
