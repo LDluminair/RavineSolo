@@ -328,7 +328,7 @@ function gameOver() {
   $(".errorText").text("You have have died! ")
   $(".errorExplain").text("You have no more hearts. ")
   $(".textBox").removeClass("hidden")
-  $("#forage, #sleep, #fireAction").addClass("hidden")
+  $("#forage, #sleep, #fireAction, #nextDay").addClass("hidden")
   gameReset()
 }
 
@@ -336,7 +336,7 @@ function rescued() {
   $(".errorText").text("Rescue has arrived! ")
   $(".errorExplain").text("You collapse to the ground and breath a sigh of relief. You are safe.  ")
   $(".textBox").removeClass("hidden")
-  $("#forage, #sleep, #fireAction").addClass("hidden")
+  $("#forage, #sleep, #fireAction, #nextDay").addClass("hidden")
   gameReset()
 }
 
